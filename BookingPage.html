@@ -1,0 +1,46 @@
+{% extends 'Base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    form{
+    height:500px;
+    width:400px;
+    background-color:maroon;
+    box-sizing: border-box;
+    padding:50px;
+    margin-left:450px;
+    margin-top:50px;
+    border: solid white 3px;
+    }
+    label{
+    color:white;
+    }
+    body{
+    background:linear-gradient(to bottom, #B4CFEC 50%, #B7CEEC 100%);
+    }
+</style>
+
+<form method="POST" action="booking">
+    <h4 style="color:white;text-align:center">Book Now</h4>
+    {% csrf_token %}
+    <label>Enter Name:</label><br>
+    <input type="text" name="name"><br>
+    <label>Phone Number:</label><br>
+    <input type="text" name="number"><br>
+    <label>Enter Email:</label><br>
+    <input type="email" name="emails"><br>
+    <label>Select Doctor</label><br>
+    <select name="doctor_name">
+    <option value="none">Select Category</option>
+    {% for i in doctors %}
+    <option value="{{i.id}}">{{i.doctor_name}}</option>
+    {% endfor %}
+    </select><br>
+    <label>Booking Date:</label><br>
+    <input type="date" name="date"><br>
+    <input type="submit">
+
+</form>
+
+{% endblock %}

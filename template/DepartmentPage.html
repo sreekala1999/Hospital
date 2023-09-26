@@ -1,0 +1,42 @@
+{% extends 'Base.html' %}
+{% load static %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+{% block content %}
+<style>
+    body{
+    background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp4vcsrpl0CKWNcgUp7XU9bxtVYBB3E8XZKA&usqp=CAU');
+    background-repeat:no-repeat;
+    background-size:1500px 2500px;
+
+    }
+    .list-group{
+    height:30px;
+    width:50%;
+    background-color:maroon;
+    margin-top:45px;
+    margin-left:450px;
+    color:white;
+    font-size:24px;
+    text-align:center;
+    }
+    .list-group1{
+    height:390px;
+    width:50%;
+    background-color:maroon;
+    margin-left:450px;
+    color:white;
+    padding-top:15px;
+    }
+
+
+</style>
+{% for i in key1 %}
+<ul class="list-group">
+  <li class="list-group-item disabled">{{i.dept_name}}</li>
+</ul>
+<ul class="list-group1">
+  <li class="list-group-item disabled"><i>{{i.details}}</i></li>
+</ul>
+{% endfor %}
+
+{% endblock %}

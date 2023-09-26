@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BasePage</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <style>
+        body{
+        line-height:1.5;
+        font-family: 'Poppins', sans-serif;
+        }
+        .l1{
+        list-style:none;
+        display:inline-block;
+        padding-left:56px;
+        margin-left:78px;
+        color:white;
+        font-size:17px;
+        height:30px;
+        width:200px;
+        background-color:white;
+        border-radius:25px;
+        }
+        .l1:hover{
+        background-color:white;
+        }
+        .u1{
+        height:80px;
+        width:100%;
+        border:solid black 2px;
+        background-color:maroon;
+        }
+        *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        }
+        .container{
+        max-width:1170px;
+        margin:auto;
+        }
+        .row{
+        display:flex;
+        flex-wrap:wrap;
+        }
+        ul{
+        list-style:none;
+        }
+        .footer{
+        margin-top:800px;
+        background-color:maroon;
+        padding:70px o;
+        }
+        .footer-col{
+        width:25%;
+        padding: 0 15px;
+        }
+        .footer-col h4{
+        font-size:18px;
+        color:black;
+        text-transform:capitalize;
+        margin-bottom:30px;
+        font-weight:500;
+        position:relative;
+        }
+        .footer-col h4::before{
+        content:'';
+        position:absolute;
+        left:0;
+        bottom-10px;
+        background-color:
+        height:2px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<marquee style="color:red">Best Hospital in Central Kerala,Best facilities.Your Health Is Important For Us</marquee>
+<p style="color:maroon;margin-left:1100px;font-size:12px"><b>24/7 APPOINTMENT0468</b>-2203500</p>
+<p style="color:maroon;margin-left:1100px;font-size:12px"><b>EMERGENCY/HELPLINE</b>+91 9447722370</p>
+<div class="header">
+    <ul class="u1">
+        <li style="color:white;font-size:26px"><b>Care and Cure Hospital</b></li>
+        <li class="l1"><a href="{% url 'home' %}">Home</a></li>
+        <li class="l1"><a href="{% url 'about'%}">About Us</a></li>
+        <li class="l1"><a href="{% url 'department' %}">Department</a></li>
+        <li class="l1"><a href="{% url 'doctors' %}">Doctors</a></li>
+        <li class="l1"><a href="{% url 'booking' %}">Booking</a>
+    </ul>
+
+</div>
+{% block content %}
+
+
+
+{% endblock %}
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4 style="color:white">Care and Cure Hospital</h4>
+                <p style="color:white">Care and Cure Hospital combines the convenience of a full range of hospital and wellness services, more than 100 affiliated doctors in over 30 clinical specialties, award winning clinical excellence, one of the country's premier academic medical systems.</p>
+                 <div class="social-links">
+                       <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-email.com"></i></a>
+                 </div>
+            </div>
+             <div class="footer-col">
+                <h4 style="color:white">Departments</h4>
+                <ul>
+                    <li><a href="#">Anaesthiology</a></li>
+                    <li><a href="#">Cardiology</a></li>
+                    <li><a href="#">Dentistory</a></li>
+                    <li><a href="#">Dermatology</a></li>
+                    <li><a href="#">ENT</a></li>
+                    <li><a href="#">General Surgery</a></li>
+                    <li><a href="#">Family Medicine</a></li>
+
+
+                </ul>
+            </div>
+             <div class="footer-col">
+                <h4 style="color:white">Links</h4>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'department' %}">Department</a></li>
+                    <li><a href="{% url 'doctors' %}">Doctors</a></li>
+                    <li><a href="{% url 'booking' %}">Booking</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 style="color:white">Services</h4>
+                <ul>
+                    <li><a href="#">Diagnostics and emergency treatment</a></li>
+                    <li><a href="#">Home medical appointments</a></li>
+                    <li><a href="#">24 X 7 Pharmacy Services</a></li>
+                    <li><a href="#">Outpatient Department Complex</a></li>
+                    <li><a href="#">Laboratory With Auto Analyser</a></li>
+                    <li><a href="#">Ambulance Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
